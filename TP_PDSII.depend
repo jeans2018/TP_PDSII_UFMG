@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1514140574 source:c:\users\jean\documents\pdsii\tp_pdsii\main.cpp
+	<iostream>
+
+1542438394 source:c:\users\jean\documents\pdsii\tp_pdsii\src\indiceinvertido.cpp
+	<string>
+	<map>
+	<set>
+	<utility>
+	"IndiceInvertido.h"
+
+1542473867 c:\users\jean\documents\pdsii\tp_pdsii\include\indiceinvertido.h
+	<string>
+	<map>
+	<set>
+	<utility>
+
