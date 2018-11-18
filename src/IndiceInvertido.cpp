@@ -10,14 +10,19 @@ using std::map;
 using std::set;
 using std::pair;
 
-IndiceInvertido::IndiceInvertido()
+//typedef pair< string,string> parPalavraArquivo;
+//typedef pair< string,set<string> > parPalavraConjArquivos;
+//typedef map< string,set<string> > StrMap;
+//typedef pair< StrMap::const_iterator,bool> P;
+
+IndiceInvertido::IndiceInvertido() : indice_()
 {
-    //ctor
+    /*empty*/
 }
 
 void IndiceInvertido::inserir(const pair<string,string>& item)
 {
-    if(!(pertence(item.first)))//chave não esta no dicionário
+    if(!(pertence(item.first)))		//chave não esta no dicionário
     {
         set<string> arquivos;
         arquivos.insert(item.second);
@@ -26,22 +31,9 @@ void IndiceInvertido::inserir(const pair<string,string>& item)
     else //chave já esta no dicionário
     {
         map< string,set<string> >::iterator it;
-        it = indice_.find(item.first); //acha a posição da chave
-        bool is_in;
-
-        if(it!= indice_.end())
-        {
-            //Arquivo já esta no set relacionado à essa chave?
-            is_in = ((it->second).find(item.second)) != ((it->second).end());
-        }
-
-        if(!(is_in))
-        {
-            //Adiciona arquivo ao set desta chave
-            (it->second).insert(item.second);
-        }
+        it = indice_.find(item.first); 		//acha a posição da chave
+        (it->second).insert(item.second);	//Adiciona o nome do arquivo ao set relacionado a esta chave
     }
-
 }
 
 void IndiceInvertido::remover(const string chave)
@@ -54,12 +46,12 @@ void IndiceInvertido::remover(const string chave)
     }
 }
 
-bool IndiceInvertido::vazio()const
+bool IndiceInvertido::vazio() const
 {
     return (indice_.empty());
 }
 
-int IndiceInvertido::tamanho()const
+int IndiceInvertido::tamanho() const
 {
     return (indice_.size());
 }
@@ -68,10 +60,8 @@ bool IndiceInvertido::pertence(const string chave)
 {
     map< string,set<string> >::iterator it;
     it = indice_.find(chave);
-
-    if(it!= indice_.end())
-        return true;
-    return false;
+    
+    return (it != indice_.end());
 }
 
 const set<string>& IndiceInvertido::buscar(const string chave)
@@ -84,5 +74,6 @@ const set<string>& IndiceInvertido::buscar(const string chave)
 
 IndiceInvertido::~IndiceInvertido()
 {
-    //dtor
+    /*empty*/
 }
+
