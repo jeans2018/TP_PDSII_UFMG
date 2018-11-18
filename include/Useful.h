@@ -14,6 +14,6 @@ using std::ifstream
 //Transforma as letras maiúsculas em minúsculas e remove caracteres de pontuação da string
 void AjustaString(string& s);
 //Lê as palavras do arquivo e as adiciona ao índice invertido
-void LeArquivo(ifstream& file, IndiceInvertido& indice);
+void LeArquivo(string file_name, IndiceInvertido& indice);
 
 #endif // USEFUL_H_INCLUDED

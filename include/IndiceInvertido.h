@@ -28,7 +28,7 @@ class IndiceInvertido
         //Verifica se a string chave pertence ao índice
         bool pertence(const string chave);
         //Retorna o set indexado por chave
-        const set<string>& buscar(const string chave)const;
+        const set<string>& buscar(const string chave);
 
     private:
        map< string,set<string> > indice_;
