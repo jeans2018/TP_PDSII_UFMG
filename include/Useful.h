@@ -9,11 +9,17 @@
 
 using std::string;
 using std::pair;
-using std::ifstream
+using std::ifstream;
 
-//Transforma as letras maiúsculas em minúsculas e remove caracteres de pontuação da string
-void AjustaString(string& s);
 //Lê as palavras do arquivo e as adiciona ao índice invertido
+// Entradas: 
+// Retorno: 
 void LeArquivo(string file_name, IndiceInvertido& indice);
+
+
+//Transforma as letras maiúsculas em minúsculas e remove caracteres que não são nem letras nem números
+// Entradas: 
+// Retorno: 
+string AjustaString(string s);
 
 #endif // USEFUL_H_INCLUDED
