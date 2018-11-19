@@ -1,5 +1,10 @@
+
 #ifndef INDICEINVERTIDO_H
 #define INDICEINVERTIDO_H
+
+#include <iostream>
+using std::ostream;
+using std::istream;
 
 #include <string>
 #include <map>
@@ -15,6 +20,8 @@ typedef map< string,set<string> > StrMap;
 
 class IndiceInvertido
 {
+//        friend ostream &operator<<(ostream& saida, const IndiceInvertido& indice);
+//        friend istream &operator>>(istream& entra, IndiceInvertido& indice);
     public:
         IndiceInvertido();
 
@@ -35,7 +42,7 @@ class IndiceInvertido
         bool pertence(const string chave);
 
         //Retorna o set indexado por chave
-        const set<string>& buscar(const string chave);
+        const set<string> buscar(const string chave);
 
         ~IndiceInvertido();
     private:
