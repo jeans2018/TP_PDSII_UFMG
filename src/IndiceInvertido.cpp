@@ -1,7 +1,9 @@
+
 #include <string>
 #include <map>
 #include <set>
 #include <utility>
+#include <iostream> // P/ nullptr
 
 #include "IndiceInvertido.h"
 
@@ -60,16 +62,18 @@ bool IndiceInvertido::pertence(const string chave)
     return (it != indice_.end());
 }
 
-const set<string>& IndiceInvertido::buscar(const string chave)
+const set<string> IndiceInvertido::buscar(const string chave)
 {
     map< string,set<string> >::iterator it;
     it = indice_.find(chave);
 
-    return (it->second);
+    if(it != indice_.end())
+        return (it->second);
+    else
+        return set<string>();
 }
 
 IndiceInvertido::~IndiceInvertido()
 {
     /*empty*/
 }
-

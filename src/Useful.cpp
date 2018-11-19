@@ -1,3 +1,4 @@
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -27,7 +28,7 @@ void LeArquivo(string file_name, IndiceInvertido& indice)
     // Ecerra o programa caso ifstream n tenha conseguido abrir o arquivo
     if(inFile.fail())
     {
-        cout << "\nFile could not be opened\n" << endl;
+        cout << "\nFile could not be opened. Program terminated\n" << endl;
         exit(1);
     }
 
