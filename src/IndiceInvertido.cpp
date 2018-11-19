@@ -10,11 +10,6 @@ using std::map;
 using std::set;
 using std::pair;
 
-//typedef pair< string,string> parPalavraArquivo;
-//typedef pair< string,set<string> > parPalavraConjArquivos;
-//typedef map< string,set<string> > StrMap;
-//typedef pair< StrMap::const_iterator,bool> P;
-
 IndiceInvertido::IndiceInvertido() : indice_()
 {
     /*empty*/
@@ -59,8 +54,9 @@ int IndiceInvertido::tamanho() const
 bool IndiceInvertido::pertence(const string chave)
 {
     map< string,set<string> >::iterator it;
+
     it = indice_.find(chave);
-    
+
     return (it != indice_.end());
 }
 

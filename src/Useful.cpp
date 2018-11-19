@@ -1,20 +1,21 @@
 #include <iostream>
 using std::cout;
+using std::endl;
 
 #include <string>
 using std::string;
 
 #include <utility>
 using std::pair;
-using std::make_pair;
 
 #include <fstream>
 using std::ifstream;
 
-#include <cstdlib>
-using std::exit;
+#include <cstdlib> // P/ exit
 
-#include <cctype> // P/ isalpha(), isdigit() e tolower()
+#include <cctype> // P/ isalnum() e tolower()
+
+#include <algorithm> // P/ remove_if
 
 #include "Useful.h"
 
@@ -27,31 +28,34 @@ void LeArquivo(string file_name, IndiceInvertido& indice)
     if(inFile.fail())
     {
         cout << "\nFile could not be opened\n" << endl;
-	exit(1);
+        exit(1);
     }
-    
+
     // Leitura dos dados do arquivo
     string palavra;
     while(inFile >> palavra)
     {
-        indice.inserir(make_pair(AjustaString(palavra),file_name));
+        AjustaString(palavra);
+        indice.inserir(make_pair(palavra,file_name));
     }
     inFile.close();
 }
 
-
+//
+bool CaractereIndesejado(char c)
+{
+    if(!isalnum(c))
+        return true;
+    return false;
+}
 
 //
-string AjustaString(string palavra)
+void AjustaString(string& palavra)
 {
-    string palavraAjustada = palavra;
-    for(int pos = 0; pos < s.length(); ++pos)
+    palavra.erase(remove_if(palavra.begin(), palavra.end(), CaractereIndesejado), palavra.end());
+    for(unsigned int pos = 0; pos < palavra.length(); ++pos)
     {
-	if((!isalpha(palavra[pos])) || (!isdigit(palavra[pos])))
-            palavraAjustada.replace(pos,1,"");
-	else
-	    palavraAjustada[pos] = tolower(palavraAjustada[pos]);
+        palavra[pos] = tolower(palavra[pos]);
     }
-    return palavraAjustada;
 }
 

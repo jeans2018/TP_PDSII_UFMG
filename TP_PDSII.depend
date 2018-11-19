@@ -1,21 +1,46 @@
 # depslib dependency file v1.0
-1542520557 source:c:\users\jean\documents\pdsii\tp_pdsii\main.cpp
+1542597829 source:c:\users\jean\documents\pdsii\tp_pdsii\main.cpp
 	<iostream>
-	<string>
-	<map>
-	<set>
-	<utility>
+	"IndiceInvertido.h"
+	"Useful.h"
 
-1542438394 source:c:\users\jean\documents\pdsii\tp_pdsii\src\indiceinvertido.cpp
+1542597756 source:c:\users\jean\documents\pdsii\tp_pdsii\src\indiceinvertido.cpp
 	<string>
 	<map>
 	<set>
 	<utility>
+	<iostream>
 	"IndiceInvertido.h"
 
-1542474169 c:\users\jean\documents\pdsii\tp_pdsii\include\indiceinvertido.h
+1542597870 c:\users\jean\documents\pdsii\tp_pdsii\include\indiceinvertido.h
 	<string>
 	<map>
 	<set>
 	<utility>
+
+1542577211 c:\users\jean\documents\pdsii\tp_pdsii\useful.h
+	<string>
+	<utility>
+	<fstream>
+	"IndiceInvertido.h"
+
+1542596694 c:\users\jean\documents\pdsii\tp_pdsii\include\useful.h
+	<string>
+	"IndiceInvertido.h"
+
+1542577211 source:c:\users\jean\documents\pdsii\tp_pdsii\include\useful.h
+	<string>
+	<utility>
+	<fstream>
+	"IndiceInvertido.h"
+
+1542596960 source:c:\users\jean\documents\pdsii\tp_pdsii\src\useful.cpp
+	<iostream>
+	<string>
+	<utility>
+	<fstream>
+	<cstdlib>
+	<cctype>
+	<algorithm>
+	"Useful.h"
 
