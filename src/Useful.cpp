@@ -1,4 +1,3 @@
-
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -23,10 +22,10 @@ using std::ifstream;
 //
 void LeArquivo(string file_name, IndiceInvertido& indice)
 {
-    ifstream inFile(file_name.c_str());
+    ifstream in_file(file_name.c_str());
 
     // Ecerra o programa caso ifstream n tenha conseguido abrir o arquivo
-    if(inFile.fail())
+    if(in_file.fail())
     {
         cout << "\nFile could not be opened. Program terminated\n" << endl;
         exit(1);
@@ -34,12 +33,12 @@ void LeArquivo(string file_name, IndiceInvertido& indice)
 
     // Leitura dos dados do arquivo
     string palavra;
-    while(inFile >> palavra)
+    while(in_file >> palavra)
     {
         AjustaString(palavra);
         indice.inserir(make_pair(palavra,file_name));
     }
-    inFile.close();
+    in_file.close();
 }
 
 //

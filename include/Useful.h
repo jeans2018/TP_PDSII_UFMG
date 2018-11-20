@@ -1,4 +1,3 @@
-
 #ifndef USEFUL_H_INCLUDED
 #define USEFUL_H_INCLUDED
 

@@ -1,10 +1,5 @@
-
 #ifndef INDICEINVERTIDO_H
 #define INDICEINVERTIDO_H
-
-#include <iostream>
-using std::ostream;
-using std::istream;
 
 #include <string>
 #include <map>
@@ -20,8 +15,6 @@ typedef map< string,set<string> > StrMap;
 
 class IndiceInvertido
 {
-//        friend ostream &operator<<(ostream& saida, const IndiceInvertido& indice);
-//        friend istream &operator>>(istream& entra, IndiceInvertido& indice);
     public:
         IndiceInvertido();
 

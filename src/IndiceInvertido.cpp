@@ -1,9 +1,7 @@
-
 #include <string>
 #include <map>
 #include <set>
 #include <utility>
-#include <iostream> // P/ nullptr
 
 #include "IndiceInvertido.h"
 
