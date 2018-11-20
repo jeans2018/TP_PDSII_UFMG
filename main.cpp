@@ -6,7 +6,9 @@
 #include "IndiceInvertido.h"
 #include "Useful.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 int main()
 {
@@ -17,25 +19,30 @@ int main()
     LeArquivo("othello.txt", indice);
     LeArquivo("romeoandjuliet.txt", indice);
 
-    string chaveDeBusca;
-    set<string> resultBusca;
-    std::ostream_iterator<string> output(cout, " ");
+    string chave_de_busca;
+    set<string> result_busca;
+    std::ostream_iterator<string> output(cout, "\n");
 
-    cout << "\nDigite uma palavra: ";
-    cin >> chaveDeBusca;
+    cout << "\nBuscar: ";
+    cin >> chave_de_busca;
 
-    resultBusca = indice.buscar(chaveDeBusca);
+    result_busca = indice.buscar(chave_de_busca);
 
         // Imprime a lista de documentos retornada na tela
-    if(!resultBusca.empty())
+    if(!result_busca.empty())
     {
         cout << endl;
-        std::copy(resultBusca.begin(),resultBusca.end(), output);
+        cout << result_busca.size() << " resultados:";
+        cout << endl << endl;
+        std::copy(result_busca.begin(),result_busca.end(), output);
         cout << endl;
     }
-
-    // Imprime a lista de documentos retornada na tela
-    //for()
+    else
+    {
+        cout << endl;
+        cout << "Sua pesquisa - " << chave_de_busca << " - nao encontrou nenhum documento correspondente.";
+        cout << endl;
+    }
 
     return 0;
 }
