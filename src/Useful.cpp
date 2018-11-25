@@ -1,3 +1,4 @@
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -11,13 +12,12 @@ using std::pair;
 #include <fstream>
 using std::ifstream;
 
-#include <cstdlib> // P/ exit
-
 #include <cctype> // P/ isalnum() e tolower()
 
 #include <algorithm> // P/ remove_if
 
 #include "Useful.h"
+#include "ArquivoNaoEncontrado.h"
 
 //
 void LeArquivo(string file_name, IndiceInvertido& indice)
@@ -27,8 +27,7 @@ void LeArquivo(string file_name, IndiceInvertido& indice)
     // Ecerra o programa caso ifstream n tenha conseguido abrir o arquivo
     if(in_file.fail())
     {
-        cout << "\nFile could not be opened. Program terminated\n" << endl;
-        exit(1);
+        throw ArquivoNaoEncontrado("\n Arquivo nao encontrado.\n Programa encerrado.\n");
     }
 
     // Leitura dos dados do arquivo

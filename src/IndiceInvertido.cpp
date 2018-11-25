@@ -75,3 +75,4 @@ IndiceInvertido::~IndiceInvertido()
 {
     /*empty*/
 }
+
