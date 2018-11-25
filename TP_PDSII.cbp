@@ -34,10 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ArquivoNaoEncontrado.h" />
 		<Unit filename="include/IndiceInvertido.h" />
+		<Unit filename="include/TestesDeUnidade.h" />
 		<Unit filename="include/Useful.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ArquivoNaoEncontrado.cpp" />
 		<Unit filename="src/IndiceInvertido.cpp" />
+		<Unit filename="src/TestesDeUnidade.cpp" />
 		<Unit filename="src/Useful.cpp" />
 		<Extensions>
 			<code_completion />

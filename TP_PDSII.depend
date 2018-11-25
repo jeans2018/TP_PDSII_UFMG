@@ -1,20 +1,23 @@
 # depslib dependency file v1.0
-1542728814 source:c:\users\jean\documents\pdsii\tp_pdsii\main.cpp
+1543183637 source:c:\users\jean\documents\pdsii\tp_pdsii\main.cpp
 	<iostream>
 	<string>
 	<set>
 	<iterator>
+	<cstdlib>
 	"IndiceInvertido.h"
 	"Useful.h"
+	"ArquivoNaoEncontrado.h"
+	"TestesDeUnidade.h"
 
-1542730168 source:c:\users\jean\documents\pdsii\tp_pdsii\src\indiceinvertido.cpp
+1543174266 source:c:\users\jean\documents\pdsii\tp_pdsii\src\indiceinvertido.cpp
 	<string>
 	<map>
 	<set>
 	<utility>
 	"IndiceInvertido.h"
 
-1542729897 c:\users\jean\documents\pdsii\tp_pdsii\include\indiceinvertido.h
+1543174266 c:\users\jean\documents\pdsii\tp_pdsii\include\indiceinvertido.h
 	<string>
 	<map>
 	<set>
@@ -26,7 +29,7 @@
 	<fstream>
 	"IndiceInvertido.h"
 
-1542729749 c:\users\jean\documents\pdsii\tp_pdsii\include\useful.h
+1543174266 c:\users\jean\documents\pdsii\tp_pdsii\include\useful.h
 	<string>
 	"IndiceInvertido.h"
 
@@ -36,13 +39,29 @@
 	<fstream>
 	"IndiceInvertido.h"
 
-1542729734 source:c:\users\jean\documents\pdsii\tp_pdsii\src\useful.cpp
+1543174266 source:c:\users\jean\documents\pdsii\tp_pdsii\src\useful.cpp
 	<iostream>
 	<string>
 	<utility>
 	<fstream>
-	<cstdlib>
 	<cctype>
 	<algorithm>
+	"Useful.h"
+	"ArquivoNaoEncontrado.h"
+
+1543174266 c:\users\jean\documents\pdsii\tp_pdsii\include\arquivonaoencontrado.h
+	<string>
+
+1543182546 c:\users\jean\documents\pdsii\tp_pdsii\include\testesdeunidade.h
+	<vector>
+	<string>
+	"IndiceInvertido.h"
+
+1543174266 source:c:\users\jean\documents\pdsii\tp_pdsii\src\arquivonaoencontrado.cpp
+	"ArquivoNaoEncontrado.h"
+
+1543174266 source:c:\users\jean\documents\pdsii\tp_pdsii\src\testesdeunidade.cpp
+	<utility>
+	"TestesDeUnidade.h"
 	"Useful.h"
 

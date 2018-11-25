@@ -23,10 +23,10 @@ public:
     bool TestaInserir(vector<string> palavra, vector<string> file_name, IndiceInvertido& idx);
 
     // Testa a remoção de uma palavra e dos arquivos associados à ela
-    bool TestaRemocao(string palavra, IndiceInvertido& idx);
+    bool TestaRemover(string palavra, IndiceInvertido& idx);
 
     // Testa a remoção de todas as palavra e de todos os arquivos associados à ela
-    bool TestaRemocao(IndiceInvertido& idx);
+    bool TestaRemover(IndiceInvertido& idx);
 
     // Testa a pesquisa por um palavra
     bool TestaBusca(string palavra, IndiceInvertido& idx);
