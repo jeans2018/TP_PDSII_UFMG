@@ -10,7 +10,7 @@ using std::string;
 class ArquivoNaoEncontrado
 {
 public:
-    ArquivoNaoEncontrado( ){}
+    ArquivoNaoEncontrado( ): mensagem_(""){}
     ArquivoNaoEncontrado(string msg_): mensagem_(msg_){}
     string getMensagem( ) const {return mensagem_; }
 private:
