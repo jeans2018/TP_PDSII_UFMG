@@ -1,3 +1,4 @@
+
 #ifndef INDICEINVERTIDO_H
 #define INDICEINVERTIDO_H
 
@@ -13,9 +14,14 @@ using std::pair;
 
 typedef map< string,set<string> > StrMap;
 
+class TestesDeUnidade;
+
 class IndiceInvertido
 {
+    friend class TestesDeUnidade;
+
     public:
+
         IndiceInvertido();
 
         //Insere um item no dicionário de forma ordenada, caso a chave já pertença
@@ -39,7 +45,7 @@ class IndiceInvertido
 
         ~IndiceInvertido();
     private:
-       StrMap indice_;
+        StrMap indice_;
 };
 
 #endif // INDICEINVERTIDO_H
